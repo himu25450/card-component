@@ -93,7 +93,7 @@ button {
 .luxury button a {
   color: var(--primary-luxury);
 }
-@media (max-width: 60em) {
+@media (max-width: 375px) {
   .child {
     flex-direction: column;
   }
