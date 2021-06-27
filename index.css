@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+:root {
+  --primary-suv: hsl(184, 100%, 22%);
+  --primary-sedan: hsl(31, 77%, 52%);
+  --primary-luxury: hsl(179, 100%, 13%);
+
+  --neutral-para: hsla(0, 0%, 100%, 0.75);
+  --neutral-head-butt: hsl(0, 0%, 95%);
+
+  --font-heading:font-family: 'Big Shoulders Display', cursive;
+  --font-para-butt:font-family: 'Lexend Deca', sans-serif;
+}
+.parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  box-shadow: 10px 10px 40px 20px var(--neutral-head-butt);
+}
+.child {
+  width: 62%;
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px;
+  margin: 5em 0;
+}
+.logo {
+  padding: 1em;
+}
+.heading {
+  padding: 1em;
+  color: var(--neutral-head-butt);
+  font-family: var(--font-heading);
+}
+.para {
+  padding: 1em;
+  font-family: var(--font-para-butt);
+  color: var(--neutral-para);
+}
+button a {
+  text-decoration: none;
+  padding: 1em;
+  font-family: var(--font-para-butt);
+}
+button {
+  border-radius: 2rem;
+  margin: 1em;
+  padding: 1em;
+  background-color: var(--neutral-head-butt);
+  border: 2px solid var(--neutral-head-butt);
+}
+.btn:hover {
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+}
+
+.vehicle {
+  padding: 3em;
+}
+/* sedan */
+.sedan {
+  background-color: var(--primary-sedan);
+  border-radius: 15px 0 0 15px;
+}
+.sedan button a {
+  color: var(--primary-sedan);
+}
+/* suv */
+.suv {
+  background-color: var(--primary-suv);
+}
+.suv button a {
+  color: var(--primary-suv);
+}
+/* luxury */
+.luxury {
+  background-color: var(--primary-luxury);
+  border-radius: 0 15px 15px 0;
+}
+.luxury button a {
+  color: var(--primary-luxury);
+}
+@media (max-width: 60em) {
+  .child {
+    flex-direction: column;
+  }
+  .sedan {
+    border-radius: 15px;
+  }
+  .suv {
+    border-radius: 15px;
+  }
+  .luxury {
+    border-radius: 15px;
+  }
+  .logo {
+    padding: 0.5em;
+  }
+  .heading {
+    padding: 0.5em;
+  }
+  .para {
+    padding: 0.5em;
+  }
+}
+.attribution h1{
+	color: var(--primary-luxury);
+	
+}
+.attribution h1 a{
+	text-decoration: none;
+	font-family: var(--font-heading);
+	color: var(--primary-sedan);
+}
